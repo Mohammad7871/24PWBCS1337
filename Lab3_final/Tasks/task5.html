@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task 5 – Button Collection</title>
+<link rel="stylesheet" href="styles/shared.css">
+<style>
+.btn-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 6px; }
+.label { font-size: 11px; font-weight: bold; background: #003399; color: white; padding: 2px 8px; border-radius: 3px; display: inline-block; margin-bottom: 10px; font-family: monospace; }
+button { cursor: pointer; font-family: Arial, sans-serif; font-size: 14px; }
+
+/* Colour buttons */
+.btn-blue    { background:#003399; color:#fff; border:none; padding:10px 22px; border-radius:6px; transition:background 0.3s, transform 0.2s; }
+.btn-blue:hover { background:#0055cc; transform:translateY(-2px); }
+.btn-green   { background:#2ecc71; color:#fff; border:none; padding:10px 22px; border-radius:6px; transition:background 0.3s, transform 0.2s; }
+.btn-green:hover { background:#27ae60; transform:translateY(-2px); }
+.btn-red     { background:#e74c3c; color:#fff; border:none; padding:10px 22px; border-radius:6px; transition:background 0.3s, transform 0.2s; }
+.btn-red:hover { background:#c0392b; transform:translateY(-2px); }
+.btn-orange  { background:#f39c12; color:#fff; border:none; padding:10px 22px; border-radius:6px; transition:background 0.3s, transform 0.2s; }
+.btn-orange:hover { background:#d68910; transform:translateY(-2px); }
+.btn-dark    { background:#2c3e50; color:#fff; border:none; padding:10px 22px; border-radius:6px; transition:background 0.3s, transform 0.2s; }
+.btn-dark:hover { background:#1a252f; transform:translateY(-2px); }
+
+/* Sizes */
+.btn-xs  { background:#003399; color:#fff; border:none; padding:4px 12px; font-size:11px; border-radius:4px; }
+.btn-sm  { background:#003399; color:#fff; border:none; padding:7px 16px; font-size:13px; border-radius:5px; }
+.btn-md  { background:#003399; color:#fff; border:none; padding:10px 22px; font-size:15px; border-radius:6px; }
+.btn-lg  { background:#003399; color:#fff; border:none; padding:14px 32px; font-size:18px; border-radius:8px; }
+.btn-xl  { background:#003399; color:#fff; border:none; padding:18px 44px; font-size:22px; border-radius:10px; }
+
+/* Shapes */
+.btn-square { background:#003399; color:#fff; border:none; padding:10px 22px; border-radius:0; }
+.btn-pill   { background:#003399; color:#fff; border:none; padding:10px 28px; border-radius:50px; }
+.btn-circle { background:#003399; color:#fff; border:none; width:50px; height:50px; border-radius:50%; font-size:20px; padding:0; }
+
+/* Outline and ghost */
+.btn-outline { background:transparent; color:#003399; border:2px solid #003399; padding:9px 22px; border-radius:6px; transition:all 0.3s; }
+.btn-outline:hover { background:#003399; color:white; }
+.btn-ghost   { background:transparent; color:#e74c3c; border:2px dashed #e74c3c; padding:9px 22px; border-radius:6px; transition:all 0.3s; }
+.btn-ghost:hover { background:#e74c3c; color:white; border-style:solid; }
+
+/* Gradient */
+.btn-gradient { background:linear-gradient(135deg,#003399,#3498db); color:white; border:none; padding:10px 22px; border-radius:6px; transition:opacity 0.3s, transform 0.2s; }
+.btn-gradient:hover { opacity:0.85; transform:translateY(-2px); }
+
+/* Shadow button */
+.btn-shadow { background:#003399; color:white; border:none; padding:10px 22px; border-radius:6px; box-shadow:0 4px 15px rgba(0,51,153,0.45); transition:box-shadow 0.3s, transform 0.2s; }
+.btn-shadow:hover { box-shadow:0 8px 25px rgba(0,51,153,0.6); transform:translateY(-3px); }
+
+/* States */
+.btn-disabled { background:#bbb; color:#eee; border:none; padding:10px 22px; border-radius:6px; cursor:not-allowed; }
+.btn-success-state { background:#2ecc71; color:white; border:none; padding:10px 22px; border-radius:6px; }
+.btn-error-state   { background:#e74c3c; color:white; border:none; padding:10px 22px; border-radius:6px; }
+
+/* Transition effects */
+.btn-grow { background:#9b59b6; color:white; border:none; padding:10px 22px; border-radius:6px; transition:transform 0.3s cubic-bezier(0.68,-0.55,0.27,1.55); }
+.btn-grow:hover { transform:scale(1.15); }
+.btn-slide { background:#1abc9c; color:white; border:none; padding:10px 22px; border-radius:6px; position:relative; overflow:hidden; transition:color 0.3s; }
+.btn-slide::before { content:''; position:absolute; top:0;left:-100%;width:100%;height:100%;background:rgba(255,255,255,0.2); transition:left 0.3s; }
+.btn-slide:hover::before { left:100%; }
+</style>
+</head>
+<body>
+
+<div class="page-title">
+    <h1>Task 5 – Button Styling Collection</h1>
+    <p>Different sizes · colours · shapes · hover states · transitions · shadows · gradients · disabled</p>
+</div>
+
+<div class="section">
+    <h2>Colour Variations</h2>
+    <span class="label">background-color · hover</span>
+    <div class="btn-row">
+        <button class="btn-blue">Blue</button>
+        <button class="btn-green">Green</button>
+        <button class="btn-red">Red</button>
+        <button class="btn-orange">Orange</button>
+        <button class="btn-dark">Dark</button>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Sizes</h2>
+    <span class="label">padding · font-size</span>
+    <div class="btn-row" style="align-items:flex-end;">
+        <button class="btn-xs">XSmall</button>
+        <button class="btn-sm">Small</button>
+        <button class="btn-md">Medium</button>
+        <button class="btn-lg">Large</button>
+        <button class="btn-xl">X-Large</button>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Shapes</h2>
+    <span class="label">border-radius</span>
+    <div class="btn-row">
+        <button class="btn-square">Square (0)</button>
+        <button class="btn-md">Default (6px)</button>
+        <button class="btn-pill">Pill (50px)</button>
+        <button class="btn-circle">+</button>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Styles</h2>
+    <span class="label">outline · ghost · gradient · shadow</span>
+    <div class="btn-row">
+        <button class="btn-outline">Outline</button>
+        <button class="btn-ghost">Ghost Dashed</button>
+        <button class="btn-gradient">Gradient</button>
+        <button class="btn-shadow">Box Shadow</button>
+    </div>
+</div>
+
+<div class="section">
+    <h2>States</h2>
+    <span class="label">disabled · success · error</span>
+    <div class="btn-row">
+        <button class="btn-blue">Normal</button>
+        <button class="btn-disabled" disabled>Disabled</button>
+        <button class="btn-success-state">&#10003; Success</button>
+        <button class="btn-error-state">&#10007; Error</button>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Transition Effects – hover to see</h2>
+    <span class="label">transition · transform · cubic-bezier</span>
+    <div class="btn-row">
+        <button class="btn-blue">Lift on hover</button>
+        <button class="btn-grow">Bouncy grow</button>
+        <button class="btn-slide">Shine slide</button>
+    </div>
+</div>
+
+<a class="back-btn" href="index.html">&#8592; Back to Tasks</a>
+</body>
+</html>

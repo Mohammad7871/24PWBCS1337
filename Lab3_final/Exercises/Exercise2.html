@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercise 2 – Basic Selectors</title>
+<style>
+* { font-family: Arial, sans-serif; box-sizing: border-box; margin: 0; padding: 0; }
+body { background-color: #f5f5f5; padding: 30px; }
+.page-title { background-color: #003399; color: white; padding: 16px 24px; border-radius: 8px; margin-bottom: 30px; }
+.page-title h1 { font-size: 22px; }
+.page-title p  { font-size: 13px; opacity: 0.8; margin-top: 4px; }
+.section { background-color: white; border: 1px solid #ddd; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+.section h2 { font-size: 16px; color: #003399; border-bottom: 2px solid #3498db; padding-bottom: 6px; margin-bottom: 14px; }
+.method-label { display: inline-block; font-size: 11px; font-weight: bold; background-color: #003399; color: white; padding: 2px 8px; border-radius: 3px; margin-bottom: 10px; }
+/* Element selectors */
+h1  { color: blue; }
+p   { color: green; }
+/* Class selector */
+.highlight { background-color: yellow; padding: 6px 10px; border-radius: 4px; }
+/* ID selector */
+#special { color: red; font-weight: bold; border-left: 4px solid red; padding-left: 10px; }
+/* Universal selector applied at top */
+.note { font-size: 13px; color: #777; margin-top: 8px; }
+.back-btn { display: inline-block; background-color: #003399; color: white; padding: 10px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; transition: background-color 0.3s; }
+.back-btn:hover { background-color: #0055cc; }
+</style>
+</head>
+<body>
+
+<div class="page-title">
+    <h1>Exercise 2 – Basic Selectors</h1>
+    <p>Element, Class, ID and Universal Selectors</p>
+</div>
+
+<div class="section">
+    <h2>Element Selector – <code>h1 { color: blue; }</code></h2>
+    <span class="method-label">element selector</span>
+    <h1>This heading is blue because of the h1 element selector</h1>
+    <p class="note">All &lt;h1&gt; tags on the page will automatically get this colour.</p>
+</div>
+
+<div class="section">
+    <h2>Element Selector – <code>p { color: green; }</code></h2>
+    <span class="method-label">element selector</span>
+    <p>This paragraph is green because of the p element selector.</p>
+    <p>Every paragraph on the page gets the same style.</p>
+</div>
+
+<div class="section">
+    <h2>Class Selector – <code>.highlight { background-color: yellow; }</code></h2>
+    <span class="method-label">class selector</span>
+    <p class="highlight">This paragraph has class="highlight" so it gets a yellow background.</p>
+    <p>This paragraph has no class, so no yellow background.</p>
+    <p class="note">Class selectors start with a dot (.) and can be reused on many elements.</p>
+</div>
+
+<div class="section">
+    <h2>ID Selector – <code>#special { color: red; }</code></h2>
+    <span class="method-label">id selector</span>
+    <p id="special">This paragraph has id="special" – red colour and left border.</p>
+    <p class="note">ID selectors start with # and should be unique on the page.</p>
+</div>
+
+<div class="section">
+    <h2>Universal Selector – <code>* { font-family: Arial; }</code></h2>
+    <span class="method-label">universal selector</span>
+    <p>The universal selector (*) at the top of this page applies <strong>font-family: Arial</strong> to every single element. That is why all text on this page uses the Arial font.</p>
+</div>
+
+<br>
+<a class="back-btn" href="index.html">&#8592; Back to Exercises</a>
+
+</body>
+</html>

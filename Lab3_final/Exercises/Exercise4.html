@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercise 4 – CSS Combinators</title>
+<link rel="stylesheet" href="style4.css">
+</head>
+<body>
+
+<div class="page-title">
+    <h1>Exercise 4 – CSS Combinators</h1>
+    <p>Descendant, Child, Adjacent Sibling, General Sibling</p>
+</div>
+
+<!-- Descendant combinator -->
+<div class="section">
+    <h2>Descendant Combinator – <code>div p</code></h2>
+    <span class="method-label">space between selectors</span>
+    <div class="demo-box">
+        <p>This paragraph is inside a div – it gets blue colour (div p selector).</p>
+        <span>This is a span inside the div (not matched by div p).</span>
+        <div>
+            <p>This nested paragraph also matches (it is still a descendant of div).</p>
+        </div>
+    </div>
+    <p class="note">The descendant combinator selects ALL matching descendants, not just direct children.</p>
+</div>
+
+<!-- Child combinator -->
+<div class="section">
+    <h2>Child Combinator – <code>div &gt; h3</code></h2>
+    <span class="method-label">&gt; between selectors</span>
+    <div class="demo-box">
+        <h3>This h3 is a DIRECT child of div – gets red colour.</h3>
+        <div>
+            <h3 style="color: #555;">This h3 is nested inside another div – NOT a direct child, no red colour.</h3>
+        </div>
+    </div>
+</div>
+
+<!-- Adjacent sibling combinator -->
+<div class="section">
+    <h2>Adjacent Sibling – <code>h2 + p</code></h2>
+    <span class="method-label">+ between selectors</span>
+    <div class="demo-box">
+        <h2>This is an h2 heading</h2>
+        <p>This paragraph comes right after h2 – it gets a yellow background.</p>
+        <p>This second paragraph does NOT get yellow (it is not adjacent to h2).</p>
+    </div>
+</div>
+
+<!-- General sibling combinator -->
+<div class="section">
+    <h2>General Sibling – <code>h2 ~ span</code></h2>
+    <span class="method-label">~ between selectors</span>
+    <div class="demo-box">
+        <h2>This is an h2 heading</h2>
+        <p>Paragraph (not a span, not affected)</p>
+        <span>This span comes after h2 – green and bold (h2 ~ span).</span>
+        <p>Another paragraph</p>
+        <span>This span also gets green and bold (still a sibling of h2).</span>
+    </div>
+</div>
+
+<a class="back-btn" href="index.html">&#8592; Back to Exercises</a>
+
+</body>
+</html>

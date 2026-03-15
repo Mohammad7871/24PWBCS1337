@@ -1,0 +1,9 @@
+/* External CSS - style1.css */
+.external-text {
+    color: #0055cc;
+    font-size: 18px;
+    background-color: #e8f0ff;
+    padding: 10px 14px;
+    border-left: 4px solid #003399;
+    border-radius: 4px;
+}

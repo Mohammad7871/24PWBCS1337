@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task 1 – CSS Selectors Practice</title>
+<link rel="stylesheet" href="styles/shared.css">
+<style>
+/* ── 5 Basic Selectors ── */
+h3       { color: #003399; }            /* element */
+.yellow  { background-color: #fff9c4; padding: 6px 10px; border-radius: 4px; } /* class */
+#unique  { color: #cc0000; font-weight: bold; border-left: 4px solid #cc0000; padding-left: 8px; } /* id */
+/* universal already applied in shared.css via * reset */
+
+/* ── 3 Attribute Selectors ── */
+input[type="text"]    { border: 2px solid #3498db; padding: 7px 10px; border-radius: 5px; width: 260px; font-size: 14px; }
+input[type="email"]   { border: 2px solid #2ecc71; padding: 7px 10px; border-radius: 5px; width: 260px; font-size: 14px; }
+a[href^="https"]      { font-weight: bold; color: #003399; }
+a[href*="google"]     { color: red; }
+
+/* ── 4 Combinators ── */
+.comb-demo div p      { color: #0055cc; }         /* descendant */
+.comb-demo div > h4   { color: #cc0000; }         /* child */
+.comb-demo h4 + p     { background-color: #fffde7; padding: 4px 8px; border-radius: 3px; } /* adjacent */
+.comb-demo h4 ~ span  { color: green; font-weight: bold; } /* general sibling */
+
+/* ── 5 Pseudo-classes ── */
+.pc-list li:first-child  { color: #003399; font-weight: bold; }
+.pc-list li:last-child   { color: #cc0000; font-weight: bold; }
+.pc-list li:nth-child(2) { background-color: #e8f5e9; }
+.pc-list li:hover        { background-color: #ddeeff; cursor: pointer; }
+input:focus { outline: 3px solid #003399; background-color: #f0f5ff; }
+
+/* ── 2 Pseudo-elements ── */
+.pe-demo::before { content: "→ "; color: #003399; font-weight: bold; }
+.pe-demo::after  { content: " ←"; color: #003399; font-weight: bold; }
+.drop::first-letter { font-size: 40px; font-weight: bold; color: #003399; float: left; margin-right: 5px; line-height: 0.9; }
+
+.tag { display: inline-block; background-color: #003399; color: white; font-size: 11px; padding: 2px 8px; border-radius: 3px; margin-bottom: 8px; font-family: monospace; }
+ul.pc-list { padding-left: 22px; }
+ul.pc-list li { padding: 4px 6px; font-size: 15px; border-radius: 3px; }
+.form-row { display: flex; flex-direction: column; gap: 8px; }
+</style>
+</head>
+<body>
+
+<div class="page-title">
+    <h1>Task 1 – CSS Selectors Practice</h1>
+    <p>5 basic selectors · 3 attribute selectors · 4 combinators · 5 pseudo-classes · 2 pseudo-elements</p>
+</div>
+
+<div class="section">
+    <h2>5 Basic Selectors</h2>
+    <span class="tag">element</span> <h3>This h3 is blue (element selector)</h3><br>
+    <span class="tag">class</span>  <p class="yellow">This paragraph has class="yellow" – yellow background</p><br>
+    <span class="tag">id</span>     <p id="unique">This paragraph has id="unique" – red + left border</p><br>
+    <span class="tag">universal</span> <p style="font-size:14px; color:#555;">Universal (*) sets box-sizing: border-box on every element on this page.</p><br>
+    <span class="tag">multiple classes</span> <p class="yellow" style="font-weight:bold; color:#003399;">Yellow bg + inline bold blue = two styles combined</p>
+</div>
+
+<div class="section">
+    <h2>3 Attribute Selectors</h2>
+    <div class="form-row">
+        <span class="tag">input[type="text"] → blue border</span>
+        <input type="text" placeholder="Text input">
+        <span class="tag">input[type="email"] → green border</span>
+        <input type="email" placeholder="Email input">
+        <span class="tag">a[href^="https"] → bold  |  a[href*="google"] → red</span>
+        <a href="https://www.google.com">Google link (both selectors match)</a><br>
+        <a href="https://www.facebook.com">Facebook link (only href^="https" matches)</a>
+    </div>
+</div>
+
+<div class="section">
+    <h2>4 Combinators</h2>
+    <div class="comb-demo">
+        <span class="tag">descendant: div p → blue</span>
+        <div style="background:#f9f9f9; padding:10px; border:1px dashed #ccc; border-radius:6px; margin-bottom:10px;">
+            <p>Descendant paragraph inside div – blue</p>
+            <div><p>Nested paragraph – also blue (still descendant)</p></div>
+        </div>
+        <span class="tag">child: div > h4 → red</span>
+        <div style="background:#f9f9f9; padding:10px; border:1px dashed #ccc; border-radius:6px; margin-bottom:10px;">
+            <h4>Direct child h4 – red</h4>
+            <div><h4 style="color:#555 !important;">Nested h4 – NOT red (not direct child)</h4></div>
+        </div>
+        <span class="tag">adjacent: h4 + p → yellow bg</span><br>
+        <span class="tag">general sibling: h4 ~ span → green bold</span>
+        <div style="background:#f9f9f9; padding:10px; border:1px dashed #ccc; border-radius:6px;">
+            <h4>Heading</h4>
+            <p>Adjacent sibling p – yellow background</p>
+            <p>Second p – no yellow</p>
+            <span>General sibling span – green bold</span>
+            <p>More text</p>
+            <span>Another span – also green bold</span>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>5 Pseudo-classes</h2>
+    <span class="tag">:first-child  :last-child  :nth-child(2)  :hover  :focus</span>
+    <ul class="pc-list">
+        <li>Item 1 – :first-child (blue bold)</li>
+        <li>Item 2 – :nth-child(2) (green bg)</li>
+        <li>Item 3 – hover me (:hover)</li>
+        <li>Item 4 – hover me</li>
+        <li>Item 5 – :last-child (red bold)</li>
+    </ul>
+    <br>
+    <input type="text" placeholder="Click me to see :focus (blue outline + yellow bg)">
+</div>
+
+<div class="section">
+    <h2>2 Pseudo-elements</h2>
+    <span class="tag">::before and ::after</span>
+    <p class="pe-demo" style="font-size:15px; margin-bottom:14px;">This text has arrows added by ::before and ::after</p>
+    <span class="tag">::first-letter (drop cap)</span>
+    <p class="drop" style="font-size:15px; line-height:1.7; max-width:560px;">his paragraph shows the drop-cap effect using ::first-letter pseudo-element. The first letter is enlarged and styled in blue, just like in printed books and magazines.</p>
+</div>
+
+<a class="back-btn" href="index.html">&#8592; Back to Tasks</a>
+
+</body>
+</html>

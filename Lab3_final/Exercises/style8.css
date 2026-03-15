@@ -1,0 +1,39 @@
+/* style8.css – Text Styling */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; background-color: #f5f5f5; padding: 30px; }
+.page-title { background-color: #003399; color: white; padding: 16px 24px; border-radius: 8px; margin-bottom: 30px; }
+.page-title h1 { font-size: 22px; }
+.page-title p  { font-size: 13px; opacity: 0.8; margin-top: 4px; }
+.section { background-color: white; border: 1px solid #ddd; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+.section h2 { font-size: 15px; color: #003399; border-bottom: 2px solid #3498db; padding-bottom: 6px; margin-bottom: 12px; font-family: monospace; }
+.method-label { display: inline-block; font-size: 11px; font-weight: bold; background-color: #003399; color: white; padding: 2px 8px; border-radius: 3px; margin-bottom: 10px; }
+p { margin: 8px 0; font-size: 15px; padding: 4px 6px; }
+.back-btn { display: inline-block; background-color: #003399; color: white; padding: 10px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; transition: background-color 0.3s; }
+.back-btn:hover { background-color: #0055cc; }
+
+/* Color and opacity */
+.color-text  { color: blue; opacity: 0.8; }
+.color-red   { color: #cc0000; }
+.color-green { color: green; }
+
+/* Alignment */
+.align-left    { text-align: left; }
+.align-center  { text-align: center; }
+.align-right   { text-align: right; }
+.align-justify { text-align: justify; }
+
+/* Decoration */
+.deco-underline   { text-decoration: underline; }
+.deco-overline    { text-decoration: overline; }
+.deco-linethrough { text-decoration: line-through; }
+.align-text       { text-align: center; text-decoration: underline; }
+
+/* Transform */
+.transform-text  { text-transform: uppercase; }
+.transform-lower { text-transform: lowercase; }
+.transform-cap   { text-transform: capitalize; }
+
+/* Shadow */
+.shadow-text  { font-size: 22px; text-shadow: 2px 2px 4px gray; }
+.shadow-blue  { font-size: 22px; color: #003399; text-shadow: 0 0 8px rgba(0,51,153,0.6); }
+.shadow-multi { font-size: 22px; text-shadow: 2px 2px 0 #ff8800, -2px -2px 0 #003399; }

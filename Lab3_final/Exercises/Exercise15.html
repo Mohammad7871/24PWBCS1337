@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercise 15 – Transforms and Transitions</title>
+<link rel="stylesheet" href="style15.css">
+</head>
+<body>
+
+<div class="page-title">
+    <h1>Exercise 15 – Transforms and Transitions</h1>
+    <p>2D transforms, transitions, transform-origin, and hover effects</p>
+</div>
+
+<div class="section">
+    <h2>2D Transformations</h2>
+    <span class="method-label">transform: translate  rotate  scale  skew</span>
+    <p class="desc">Each box below has a different transform applied. They are shifted from where they would normally appear.</p>
+    <div class="transform-row">
+        <div class="transform-item">
+            <div class="transform-box translate">Translate<br><small>translateX(30px)</small></div>
+        </div>
+        <div class="transform-item">
+            <div class="transform-box rotate">Rotate<br><small>rotate(15deg)</small></div>
+        </div>
+        <div class="transform-item">
+            <div class="transform-box scale">Scale<br><small>scale(1.2)</small></div>
+        </div>
+        <div class="transform-item">
+            <div class="transform-box skew">Skew<br><small>skew(20deg, 10deg)</small></div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Hover with CSS Transitions</h2>
+    <span class="method-label">transition: transform 0.3s ease  background-color 0.3s ease</span>
+    <p class="desc">Hover over each box to see a smooth animated transition.</p>
+    <div class="hover-row">
+        <div class="hover-item">
+            <div class="hover-box hover-scale">Hover to Scale</div>
+        </div>
+        <div class="hover-item">
+            <div class="hover-box hover-rotate-btn">Hover to Rotate</div>
+        </div>
+        <div class="hover-item">
+            <div class="hover-box hover-color">Hover to Change Colour</div>
+        </div>
+        <div class="hover-item">
+            <div class="hover-box hover-combo">Hover – Combo Effect</div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Transform Origin</h2>
+    <span class="method-label">transform-origin: top left / center / bottom right</span>
+    <p class="desc">All three boxes rotate the same 25deg. But the pivot point is different for each one. Hover to see the rotation.</p>
+    <div class="hover-row">
+        <div class="hover-item">
+            <div class="origin-box origin-tl">origin:<br>top left</div>
+        </div>
+        <div class="hover-item">
+            <div class="origin-box origin-center">origin:<br>center</div>
+        </div>
+        <div class="hover-item">
+            <div class="origin-box origin-br">origin:<br>bottom right</div>
+        </div>
+    </div>
+</div>
+
+<a class="back-btn" href="index.html">&#8592; Back to Exercises</a>
+
+</body>
+</html>

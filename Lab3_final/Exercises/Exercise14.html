@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercise 14 – Box Model Properties</title>
+<link rel="stylesheet" href="style14.css">
+</head>
+<body>
+
+<div class="page-title">
+    <h1>Exercise 14 – Box Model Properties</h1>
+    <p>Margin, padding, border, box-sizing, outline, box-shadow</p>
+</div>
+
+<div class="section">
+    <h2>The CSS Box Model</h2>
+    <span class="method-label">margin  border  padding  content</span>
+    <p class="desc">Every HTML element is a box made of four layers from outside to inside: <strong>Margin → Border → Padding → Content</strong>.</p>
+
+    <!-- Visual box model diagram -->
+    <div class="box-model-visual">
+        <span class="layer-label margin-label">MARGIN</span>
+        <div class="margin-area">
+            <span class="layer-label border-label">BORDER</span>
+            <div class="border-area">
+                <span class="layer-label padding-label">PADDING</span>
+                <div class="padding-area">
+                    <div class="content-area">CONTENT</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Margins, Padding and Borders</h2>
+    <span class="method-label">margin: 20px  padding: 20px  border: 3px solid</span>
+    <p class="desc">The blue box below has: margin 20px (space outside), padding 20px (space inside), and a 3px solid blue border.</p>
+    <div class="box">
+        This box has margin, padding, and border applied from style14.css.
+    </div>
+</div>
+
+<div class="section">
+    <h2>Box-sizing: content-box vs border-box</h2>
+    <span class="method-label">box-sizing</span>
+    <p class="desc">Both boxes have <code>width: 280px</code> and <code>padding: 20px</code> and <code>border: 3px</code>. With <code>content-box</code> the actual rendered width is wider. With <code>border-box</code> the total stays exactly 280px.</p>
+    <div class="content-box">
+        <strong>content-box</strong> – width: 280px but rendered wider because padding and border are ADDED on top.
+    </div>
+    <div class="border-box">
+        <strong>border-box</strong> – width: 280px and that is the TOTAL including padding and border. Same width as above set in CSS.
+    </div>
+</div>
+
+<div class="section">
+    <h2>Outline Properties</h2>
+    <span class="method-label">outline</span>
+    <p class="desc">Outline is similar to border but it does NOT take up space in the layout (it sits outside the border).</p>
+    <div class="outline-box">This box has a dashed red outline outside the solid black border.</div>
+</div>
+
+<div class="section">
+    <h2>Box Shadow Effects</h2>
+    <span class="method-label">box-shadow</span>
+    <div class="shadow-row">
+        <div class="shadow-box shadow-light">Light shadow<br><small>2px 2px 6px</small></div>
+        <div class="shadow-box shadow-dark">Dark shadow<br><small>5px 5px 15px</small></div>
+        <div class="shadow-box shadow-blue">Coloured shadow<br><small>blue glow</small></div>
+        <div class="shadow-box shadow-inset">Inset shadow<br><small>inner shadow</small></div>
+    </div>
+</div>
+
+<a class="back-btn" href="index.html">&#8592; Back to Exercises</a>
+
+</body>
+</html>

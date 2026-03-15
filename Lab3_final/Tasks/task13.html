@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task 13 – GitHub Pages</title>
+<link rel="stylesheet" href="styles/shared.css">
+<style>
+.label { font-size:11px; font-weight:bold; background:#003399; color:white; padding:2px 8px; border-radius:3px; display:inline-block; margin-bottom:12px; font-family:monospace; }
+.step {
+    display:flex; gap:16px; align-items:flex-start;
+    background:#f8f9fa; border:1px solid #e0e0e0;
+    border-radius:10px; padding:16px 18px; margin-bottom:14px;
+}
+.step-num {
+    width:34px; height:34px; background:#003399; color:white;
+    border-radius:50%; display:flex; align-items:center; justify-content:center;
+    font-size:16px; font-weight:900; flex-shrink:0;
+}
+.step-body h4 { font-size:15px; color:#1a1a2e; margin-bottom:5px; }
+.step-body p  { font-size:13px; color:#555; line-height:1.6; }
+.step-body code {
+    display:inline-block; background:#1a1a2e; color:#4fc3f7;
+    padding:2px 8px; border-radius:4px; font-family:monospace;
+    font-size:13px; margin:2px 2px;
+}
+.cmd-block {
+    background:#1a1a2e; color:#a5f3fc; font-family:monospace;
+    font-size:13px; padding:14px 18px; border-radius:8px;
+    margin:10px 0; line-height:2;
+}
+.cmd-block .comment { color:#6b7280; }
+.cmd-block .cmd     { color:#a5f3fc; }
+.url-box {
+    background:white; border:2px solid #003399; border-radius:8px;
+    padding:14px 18px; margin-top:10px; display:flex; align-items:center; gap:12px;
+}
+.url-box span { font-size:20px; }
+.url-box div  { font-size:14px; }
+.url-box strong { display:block; font-family:monospace; color:#003399; font-size:15px; margin-top:2px; }
+.checklist { list-style:none; padding:0; }
+.checklist li { padding:8px 0; border-bottom:1px solid #f0f0f0; font-size:14px; color:#333; display:flex; align-items:center; gap:10px; }
+.checklist li:last-child { border-bottom:none; }
+.checklist li::before { content:'✅'; font-size:16px; }
+.note-box { background:#fffde7; border:1px solid #f9e100; border-radius:8px; padding:14px 18px; font-size:14px; color:#555; margin-top:10px; line-height:1.7; }
+.note-box strong { color:#333; }
+</style>
+</head>
+<body>
+
+<div class="page-title">
+    <h1>Task 13 – GitHub Pages Enhancement</h1>
+    <p>Upload project to GitHub · enable GitHub Pages · publish live website</p>
+</div>
+
+<!-- What was done -->
+<div class="section">
+    <h2>What I Did – Checklist</h2>
+    <span class="label">completed steps</span>
+    <ul class="checklist">
+        <li>Created a GitHub account at github.com</li>
+        <li>Created a new repository named <strong>Lab3</strong></li>
+        <li>Uploaded all HTML and CSS files including the Exercises and Tasks folders</li>
+        <li>Pushed the project using Git commands from VS Code terminal</li>
+        <li>Enabled GitHub Pages from repository Settings → Pages</li>
+        <li>Selected <strong>main branch / root</strong> as the source</li>
+        <li>The site was published and is accessible at a public URL</li>
+        <li>Added custom CSS styling to improve the appearance on GitHub Pages</li>
+    </ul>
+</div>
+
+<!-- Step by step guide -->
+<div class="section">
+    <h2>Step-by-Step Guide</h2>
+    <span class="label">how to deploy on GitHub Pages</span>
+
+    <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+            <h4>Create a GitHub Repository</h4>
+            <p>Go to <strong>github.com</strong> → Click <strong>New</strong> → Name it <code>Lab3</code> → Set it to <strong>Public</strong> → Click <strong>Create repository</strong>.</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+            <h4>Initialise Git and Push Files</h4>
+            <p>Open VS Code terminal inside your project folder and run these commands:</p>
+            <div class="cmd-block">
+                <span class="comment"># Initialise git inside the project folder</span><br>
+                <span class="cmd">git init</span><br>
+                <span class="cmd">git add .</span><br>
+                <span class="cmd">git commit -m "Initial commit – Lab 03 &amp; 04"</span><br>
+                <span class="comment"># Connect to your GitHub repository</span><br>
+                <span class="cmd">git remote add origin https://github.com/YOUR_USERNAME/Lab3.git</span><br>
+                <span class="cmd">git branch -M main</span><br>
+                <span class="cmd">git push -u origin main</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+            <h4>Enable GitHub Pages</h4>
+            <p>On your repository page go to: <code>Settings</code> → <code>Pages</code> → Under <strong>Source</strong> select <code>main</code> branch and <code>/ (root)</code> → Click <strong>Save</strong>.</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+            <h4>Your Site is Live!</h4>
+            <p>After 1–2 minutes your site will be published. The URL will follow this pattern:</p>
+            <div class="url-box">
+                <span>🌐</span>
+                <div>
+                    Your GitHub Pages URL:
+                    <strong>https://YOUR_USERNAME.github.io/Lab3/</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-body">
+            <h4>Update Your Site</h4>
+            <p>Whenever you make changes to your files, push them to GitHub and the site updates automatically:</p>
+            <div class="cmd-block">
+                <span class="cmd">git add .</span><br>
+                <span class="cmd">git commit -m "Updated styling"</span><br>
+                <span class="cmd">git push</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- What was improved -->
+<div class="section">
+    <h2>CSS Enhancements for GitHub Pages</h2>
+    <span class="label">styling improvements</span>
+    <ul style="padding-left:20px; font-size:14px; color:#444; line-height:2;">
+        <li>Added a consistent colour scheme using <strong>#003399</strong> (dark blue) across all pages</li>
+        <li>Improved typography with <strong>Arial</strong> and Google Fonts (Poppins)</li>
+        <li>All pages now have a proper <strong>header banner</strong> and <strong>styled back button</strong></li>
+        <li>Responsive layouts using <strong>flexbox</strong> and <strong>CSS grid</strong></li>
+        <li>Hover effects and transitions added to navigation links and buttons</li>
+        <li>Consistent padding, spacing, and border-radius across all components</li>
+    </ul>
+    <div class="note-box">
+        <strong>Note:</strong> All links between pages use relative paths so the site works both locally (with VS Code Live Server) and when deployed on GitHub Pages. Make sure the folder structure matches exactly what is in the repository.
+    </div>
+</div>
+
+<a class="back-btn" href="index.html">&#8592; Back to Tasks</a>
+</body>
+</html>

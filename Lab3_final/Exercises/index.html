@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Lab Exercises</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eef2f7;
+    padding: 30px 20px;
+}
+.top-bar {
+    background-color: #003399;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.top-bar h1 { font-size: 26px; }
+.top-bar p  { font-size: 13px; opacity: 0.75; margin-top: 5px; }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+    max-width: 900px;
+    margin: 0 auto 24px;
+}
+.card {
+    background-color: white;
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #2c3e50;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+.card:hover {
+    background-color: #3498db;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(52,152,219,0.35);
+}
+.card .num {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.card:hover .num { background-color: #2980b9; }
+.card .label {
+    padding: 14px 16px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.card .desc {
+    padding: 0 16px 14px;
+    font-size: 12px;
+    opacity: 0.7;
+}
+.back-btn {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    background-color: #003399;
+    color: white;
+    padding: 10px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.back-btn:hover { background-color: #0055cc; }
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+    <h1>CSS Lab – Exercises</h1>
+    <p>Click any exercise to open it</p>
+</div>
+
+<div class="grid">
+    <a class="card" href="Exercise1.html">
+        <div class="num">EXERCISE 1</div>
+        <div class="label">CSS Implementation</div>
+        <div class="desc">Inline, Internal &amp; External CSS</div>
+    </a>
+    <a class="card" href="Exercise2.html">
+        <div class="num">EXERCISE 2</div>
+        <div class="label">Basic Selectors</div>
+        <div class="desc">Element, Class, ID, Universal</div>
+    </a>
+    <a class="card" href="Exercise3.html">
+        <div class="num">EXERCISE 3</div>
+        <div class="label">Attribute Selectors</div>
+        <div class="desc">href, type, partial match</div>
+    </a>
+    <a class="card" href="Exercise4.html">
+        <div class="num">EXERCISE 4</div>
+        <div class="label">CSS Combinators</div>
+        <div class="desc">Descendant, Child, Sibling</div>
+    </a>
+    <a class="card" href="Exercise5.html">
+        <div class="num">EXERCISE 5</div>
+        <div class="label">Pseudo-classes</div>
+        <div class="desc">:hover, :focus, :nth-child</div>
+    </a>
+    <a class="card" href="Exercise6.html">
+        <div class="num">EXERCISE 6</div>
+        <div class="label">Pseudo-elements</div>
+        <div class="desc">::before, ::after, ::first-letter</div>
+    </a>
+    <a class="card" href="Exercise7.html">
+        <div class="num">EXERCISE 7</div>
+        <div class="label">Font Properties</div>
+        <div class="desc">Family, size, weight, style</div>
+    </a>
+    <a class="card" href="Exercise8.html">
+        <div class="num">EXERCISE 8</div>
+        <div class="label">Text Styling</div>
+        <div class="desc">Color, align, shadow, transform</div>
+    </a>
+    <a class="card" href="Exercise9.html">
+        <div class="num">EXERCISE 9</div>
+        <div class="label">Text Spacing</div>
+        <div class="desc">Line height, letter &amp; word spacing</div>
+    </a>
+    <a class="card" href="Exercise10.html">
+        <div class="num">EXERCISE 10</div>
+        <div class="label">Background Properties</div>
+        <div class="desc">Color, image, position, size</div>
+    </a>
+    <a class="card" href="Exercise11.html">
+        <div class="num">EXERCISE 11</div>
+        <div class="label">Advanced Backgrounds</div>
+        <div class="desc">Gradients, blend, clip</div>
+    </a>
+    <a class="card" href="Exercise12.html">
+        <div class="num">EXERCISE 12</div>
+        <div class="label">Basic Image Styling</div>
+        <div class="desc">Dimensions, border-radius, filters</div>
+    </a>
+    <a class="card" href="Exercise13.html">
+        <div class="num">EXERCISE 13</div>
+        <div class="label">Advanced Image Effects</div>
+        <div class="desc">Hover, blend modes, clip-path</div>
+    </a>
+    <a class="card" href="Exercise14.html">
+        <div class="num">EXERCISE 14</div>
+        <div class="label">Box Model</div>
+        <div class="desc">Margin, padding, border, shadow</div>
+    </a>
+    <a class="card" href="Exercise15.html">
+        <div class="num">EXERCISE 15</div>
+        <div class="label">Transforms &amp; Transitions</div>
+        <div class="desc">Translate, rotate, scale, skew</div>
+    </a>
+</div>
+
+<a class="back-btn" href="../index.html">&#8592; Back to Home</a>
+
+</body>
+</html>

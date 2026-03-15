@@ -1,0 +1,49 @@
+/* shared.css – common styles used by all task pages */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; background-color: #f0f2f5; padding: 30px; }
+
+.page-title {
+    background-color: #003399;
+    color: white;
+    padding: 18px 26px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.page-title h1 { font-size: 22px; }
+.page-title p  { font-size: 13px; opacity: 0.8; margin-top: 4px; }
+
+.section {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+}
+.section h2 {
+    font-size: 16px;
+    color: #003399;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 6px;
+    margin-bottom: 14px;
+}
+.section h3 {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.note { font-size: 13px; color: #777; margin-top: 8px; }
+
+.back-btn {
+    display: inline-block;
+    background-color: #003399;
+    color: white;
+    padding: 10px 26px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+.back-btn:hover { background-color: #0055cc; }

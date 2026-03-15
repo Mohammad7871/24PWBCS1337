@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task 12 – Course Schedule Table</title>
+<link rel="stylesheet" href="styles/shared.css">
+<style>
+.label { font-size:11px; font-weight:bold; background:#003399; color:white; padding:2px 8px; border-radius:3px; display:inline-block; margin-bottom:12px; font-family:monospace; }
+.table-wrap { overflow-x:auto; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.1); }
+
+/* ── Main styled table ── */
+.styled-table { width:100%; border-collapse:collapse; font-size:14px; }
+.styled-table thead tr { background-color:#003399; color:white; }
+.styled-table th { padding:13px 16px; text-align:left; font-size:13px; letter-spacing:0.4px; }
+.styled-table td { padding:11px 16px; border-bottom:1px solid #eeeeee; color:#333; }
+
+/* Zebra striping */
+.styled-table tbody tr:nth-child(even) { background-color:#f5f8ff; }
+.styled-table tbody tr:nth-child(odd)  { background-color:#ffffff; }
+
+/* Hover on rows */
+.styled-table tbody tr { transition:background-color 0.2s; }
+.styled-table tbody tr:hover { background-color:#d8e8ff; }
+
+/* Colour-coded course type tags */
+.tag { display:inline-block; padding:3px 10px; border-radius:20px; font-size:12px; font-weight:700; letter-spacing:0.3px; }
+.tag-core     { background:#dbeafe; color:#1e40af; }
+.tag-lab      { background:#dcfce7; color:#166534; }
+.tag-theory   { background:#fef9c3; color:#854d0e; }
+.tag-elective { background:#ede9fe; color:#5b21b6; }
+.tag-maths    { background:#fee2e2; color:#991b1b; }
+
+/* Credit hours visual bar */
+.cr-bar { display:flex; gap:3px; align-items:center; }
+.cr-dot { width:10px; height:10px; border-radius:50%; background:#003399; display:inline-block; }
+.cr-dot.empty { background:#e0e0e0; }
+
+/* Summary stats row */
+.stats-row { display:flex; gap:16px; flex-wrap:wrap; margin-top:18px; }
+.stat-box { background:white; border:1px solid #e0e0e0; border-radius:8px; padding:14px 20px; text-align:center; flex:1; min-width:120px; }
+.stat-box .stat-num { font-size:26px; font-weight:900; color:#003399; }
+.stat-box .stat-lbl { font-size:12px; color:#777; margin-top:2px; }
+</style>
+</head>
+<body>
+
+<div class="page-title">
+    <h1>Task 12 – Course Schedule Table</h1>
+    <p>Zebra striping · hover rows · custom borders · colour-coded course types · responsive design</p>
+</div>
+
+<div class="section">
+    <h2>CS Department – Semester Course Schedule</h2>
+    <span class="label">:nth-child(even) zebra · :hover highlight · colour tags</span>
+
+    <div class="table-wrap">
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                    <th>Credit Hours</th>
+                    <th>Type</th>
+                    <th>Instructor</th>
+                    <th>Schedule</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><strong>CS-224L</strong></td>
+                    <td>Web Technologies Lab</td>
+                    <td>
+                        <div class="cr-bar">
+                            <span class="cr-dot"></span>
+                            <span class="cr-dot empty"></span>
+                            <span class="cr-dot empty"></span>
+                            &nbsp;1
+                        </div>
+                    </td>
+                    <td><span class="tag tag-lab">Lab</span></td>
+                    <td>Mr. Mohammad</td>
+                    <td>Mon 8–10am</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><strong>CS-224</strong></td>
+                    <td>Web Technologies (Theory)</td>
+                    <td>
+                        <div class="cr-bar">
+                            <span class="cr-dot"></span>
+                            <span class="cr-dot"></span>
+                            <span class="cr-dot"></span>
+                            &nbsp;3
+                        </div>
+                    </td>
+                    <td><span class="tag tag-theory">Theory</span></td>
+                    <td>Mr. Mohammad</td>
+                    <td>Tue/Thu 10–11:30am</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><strong>CS-220</strong></td>
+                    <td>Data Structures &amp; Algorithms</td>
+                    <td>
+                        <div class="cr-bar">
+                            <span class="cr-dot"></span>
+                            <span class="cr-dot"></span>
+                            <span class="cr-dot"></span>
+                            &nbsp;3
+                        </div>
+                    </td>
+                    <td><span class="tag tag-core">Core</span></td>
+                    <td>Dr. Arshad Ali</td>
+                    <td>Mon/Wed 11–12:30pm</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><strong>CS-222</strong></td>
+                    <td>Operating Systems</td>
+                    <td>
+                        <div class="cr-bar">
+                            <span class="cr-dot"></span>
+                            <span class="cr-dot"></span>
+                            <span class="cr-dot"></span>
+                            &nbsp;3
+                        </div>
+                    </td>
+                    <td><span class="tag tag-core">Core</span></td>
+                    <td>Dr. Khalid Mehmood</td>
+                    <td>Tue/Thu 2–3:30pm</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><strong>CS-230</strong></td>
+                    <td>Database Systems</td>
+                    <td>
+                        <div class="cr-bar">
+                            <span class="cr-dot"></span>
+                            <span class="cr-dot"></span>
+                            <span class="cr-dot"></span>
+                            &nbsp;3
+                        </div>
+                    </td>
+                    <td><span class="tag tag-theory">Theory</span></td>
+                    <td>Dr. Naeem Ahmed</td>
+                    <td>Wed/Fri 9–10:30am</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><strong>MATH-210</strong></td>
+                    <td>Discrete Mathematics</td>
+                    <td>
+                        <div class="cr-bar">
+                            <span class="cr-dot"></span>
+                            <span class="cr-dot"></span>
+                            <span class="cr-dot"></span>
+                            &nbsp;3
+                        </div>
+                    </td>
+                    <td><span class="tag tag-maths">Maths</span></td>
+                    <td>Dr. Zahid Ullah</td>
+                    <td>Mon/Wed 1–2:30pm</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td><strong>HU-201</strong></td>
+                    <td>Technical Writing &amp; Communication</td>
+                    <td>
+                        <div class="cr-bar">
+                            <span class="cr-dot"></span>
+                            <span class="cr-dot"></span>
+                            <span class="cr-dot empty"></span>
+                            &nbsp;2
+                        </div>
+                    </td>
+                    <td><span class="tag tag-elective">Elective</span></td>
+                    <td>Ms. Sana Bibi</td>
+                    <td>Fri 10am–12pm</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Summary stats -->
+    <div class="stats-row">
+        <div class="stat-box"><div class="stat-num">7</div><div class="stat-lbl">Total Courses</div></div>
+        <div class="stat-box"><div class="stat-num">18</div><div class="stat-lbl">Credit Hours</div></div>
+        <div class="stat-box"><div class="stat-num">2</div><div class="stat-lbl">Core Subjects</div></div>
+        <div class="stat-box"><div class="stat-num">1</div><div class="stat-lbl">Lab</div></div>
+        <div class="stat-box"><div class="stat-num">2</div><div class="stat-lbl">Theory</div></div>
+        <div class="stat-box"><div class="stat-num">1</div><div class="stat-lbl">Elective</div></div>
+    </div>
+</div>
+
+<a class="back-btn" href="index.html">&#8592; Back to Tasks</a>
+</body>
+</html>

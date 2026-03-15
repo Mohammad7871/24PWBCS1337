@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CS 224L – Lab 03 & 04</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eef2f7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+.header {
+    background-color: #003399;
+    color: white;
+    text-align: center;
+    padding: 30px 60px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.header h2 {
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    opacity: 0.85;
+}
+.header h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+.header p {
+    margin-top: 8px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+.cards {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card {
+    display: block;
+    padding: 40px 60px;
+    background-color: #003399;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 12px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    min-width: 200px;
+}
+.card:hover {
+    background-color: #0055cc;
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+.card span {
+    display: block;
+    font-size: 13px;
+    font-weight: normal;
+    margin-top: 6px;
+    opacity: 0.8;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h2>CS 224L – Web Technologies</h2>
+    <h1>Lab 03 &amp; 04</h1>
+    <p>CSS Fundamentals: Styling and Visual Design</p>
+    <p>Department of Computer Science – UET Peshawar</p>
+</div>
+
+<div class="cards">
+    <a class="card" href="Exercises/index.html">
+        Exercises
+        <span>Exercise 1 – 15</span>
+    </a>
+    <a class="card" href="Tasks/index.html">
+        Tasks
+        <span>Task 1 – 13</span>
+    </a>
+</div>
+
+</body>
+</html>

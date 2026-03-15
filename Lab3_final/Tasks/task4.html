@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task 4 – Image Styling Portfolio</title>
+<link rel="stylesheet" href="styles/shared.css">
+<style>
+.img-grid { display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; }
+.img-item { text-align: center; }
+.cap { font-size: 12px; color: #555; margin-top: 6px; line-height: 1.4; }
+.label { font-size: 11px; font-weight: bold; background: #003399; color: white; padding: 2px 8px; border-radius: 3px; display: inline-block; margin-bottom: 12px; font-family: monospace; }
+
+/* Shapes */
+.img-normal  { width:160px; height:120px; object-fit:cover; border-radius:6px; display:block; }
+.img-rounded { width:160px; height:120px; object-fit:cover; border-radius:20px; display:block; }
+.img-circle  { width:130px; height:130px; object-fit:cover; border-radius:50%; display:block; }
+
+/* Borders */
+.img-b1 { width:160px; height:120px; object-fit:cover; border:4px solid #3498db; border-radius:8px; display:block; }
+.img-b2 { width:160px; height:120px; object-fit:cover; border:4px solid #e74c3c; border-radius:50%; display:block; }
+.img-b3 { width:160px; height:120px; object-fit:cover; border:6px double #f39c12; border-radius:8px; display:block; }
+
+/* Shadows */
+.img-sh1 { width:160px; height:120px; object-fit:cover; border-radius:8px; box-shadow:4px 4px 12px rgba(0,0,0,0.25); display:block; }
+.img-sh2 { width:160px; height:120px; object-fit:cover; border-radius:8px; box-shadow:0 6px 20px rgba(0,51,153,0.45); display:block; }
+
+/* Hover effects */
+.img-hover-z  { width:160px; height:120px; object-fit:cover; border-radius:8px; transition:transform 0.3s ease; display:block; }
+.img-hover-z:hover { transform:scale(1.12); }
+.img-hover-r  { width:160px; height:120px; object-fit:cover; border-radius:8px; transition:transform 0.4s ease; display:block; }
+.img-hover-r:hover { transform:rotate(6deg) scale(1.06); }
+.img-hover-op { width:160px; height:120px; object-fit:cover; border-radius:8px; transition:opacity 0.3s; display:block; }
+.img-hover-op:hover { opacity:0.45; }
+.img-hover-g  { width:160px; height:120px; object-fit:cover; border-radius:8px; filter:grayscale(100%); transition:filter 0.4s; display:block; }
+.img-hover-g:hover { filter:grayscale(0%); }
+
+/* Filters */
+.img-f1 { width:150px; height:115px; object-fit:cover; border-radius:8px; display:block; }
+.img-f2 { width:150px; height:115px; object-fit:cover; border-radius:8px; display:block; filter:grayscale(100%); }
+.img-f3 { width:150px; height:115px; object-fit:cover; border-radius:8px; display:block; filter:sepia(80%); }
+.img-f4 { width:150px; height:115px; object-fit:cover; border-radius:8px; display:block; filter:blur(3px); }
+.img-f5 { width:150px; height:115px; object-fit:cover; border-radius:8px; display:block; filter:brightness(150%); }
+.img-f6 { width:150px; height:115px; object-fit:cover; border-radius:8px; display:block; filter:contrast(200%); }
+
+/* Overlay */
+.img-overlay-wrap { position:relative; display:inline-block; overflow:hidden; border-radius:10px; }
+.img-overlay-wrap img { width:200px; height:150px; object-fit:cover; display:block; transition:transform 0.4s; }
+.img-overlay-wrap:hover img { transform:scale(1.1); }
+.overlay-text { position:absolute; bottom:0; left:0; right:0; background:linear-gradient(to top,rgba(0,0,0,0.75),transparent); color:white; padding:12px 14px; font-size:13px; font-weight:bold; transform:translateY(100%); transition:transform 0.3s; }
+.img-overlay-wrap:hover .overlay-text { transform:translateY(0); }
+</style>
+</head>
+<body>
+
+<div class="page-title">
+    <h1>Task 4 – Image Styling Portfolio</h1>
+    <p>Rounded corners · circular images · borders · shadows · hover effects · CSS filters · overlays</p>
+</div>
+
+<div class="section">
+    <h2>Border Radius Shapes</h2>
+    <span class="label">border-radius</span>
+    <div class="img-grid">
+        <div class="img-item"><img src="images/image1.jpg" alt="Normal" class="img-normal"><p class="cap">No border-radius</p></div>
+        <div class="img-item"><img src="images/image1.jpg" alt="Rounded" class="img-rounded"><p class="cap">border-radius: 20px<br>Rounded corners</p></div>
+        <div class="img-item"><img src="images/image1.jpg" alt="Circle" class="img-circle"><p class="cap">border-radius: 50%<br>Circle shape</p></div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Image Borders</h2>
+    <span class="label">border · border-radius</span>
+    <div class="img-grid">
+        <div class="img-item"><img src="images/image2.jpg" alt="" class="img-b1"><p class="cap">solid blue border</p></div>
+        <div class="img-item"><img src="images/image2.jpg" alt="" class="img-b2"><p class="cap">red border + circle</p></div>
+        <div class="img-item"><img src="images/image2.jpg" alt="" class="img-b3"><p class="cap">double orange border</p></div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Box Shadows</h2>
+    <span class="label">box-shadow</span>
+    <div class="img-grid">
+        <div class="img-item"><img src="images/image3.jpg" alt="" class="img-sh1"><p class="cap">Dark shadow</p></div>
+        <div class="img-item"><img src="images/image3.jpg" alt="" class="img-sh2"><p class="cap">Blue glow shadow</p></div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Hover Effects – hover over each image</h2>
+    <span class="label">transition · transform · opacity · filter</span>
+    <div class="img-grid">
+        <div class="img-item"><img src="images/image4.jpg" alt="" class="img-hover-z"><p class="cap">Scale up on hover</p></div>
+        <div class="img-item"><img src="images/image4.jpg" alt="" class="img-hover-r"><p class="cap">Rotate on hover</p></div>
+        <div class="img-item"><img src="images/image4.jpg" alt="" class="img-hover-op"><p class="cap">Fade out on hover</p></div>
+        <div class="img-item"><img src="images/image1.jpg" alt="" class="img-hover-g"><p class="cap">Gray → colour on hover</p></div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>CSS Filters</h2>
+    <span class="label">filter: grayscale · sepia · blur · brightness · contrast</span>
+    <div class="img-grid">
+        <div class="img-item"><img src="images/image2.jpg" alt="" class="img-f1"><p class="cap">Original</p></div>
+        <div class="img-item"><img src="images/image2.jpg" alt="" class="img-f2"><p class="cap">grayscale(100%)</p></div>
+        <div class="img-item"><img src="images/image2.jpg" alt="" class="img-f3"><p class="cap">sepia(80%)</p></div>
+        <div class="img-item"><img src="images/image2.jpg" alt="" class="img-f4"><p class="cap">blur(3px)</p></div>
+        <div class="img-item"><img src="images/image2.jpg" alt="" class="img-f5"><p class="cap">brightness(150%)</p></div>
+        <div class="img-item"><img src="images/image2.jpg" alt="" class="img-f6"><p class="cap">contrast(200%)</p></div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Image Overlay with Text – hover to reveal</h2>
+    <span class="label">position: absolute · gradient overlay</span>
+    <div class="img-grid">
+        <div class="img-item">
+            <div class="img-overlay-wrap">
+                <img src="images/image3.jpg" alt="Overlay 1">
+                <div class="overlay-text">Hover revealed this text!</div>
+            </div>
+            <p class="cap">Slide-up overlay on hover</p>
+        </div>
+        <div class="img-item">
+            <div class="img-overlay-wrap">
+                <img src="images/image4.jpg" alt="Overlay 2">
+                <div class="overlay-text">Image zooms + text appears</div>
+            </div>
+            <p class="cap">Zoom + overlay combined</p>
+        </div>
+    </div>
+</div>
+
+<a class="back-btn" href="index.html">&#8592; Back to Tasks</a>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercise 1 – CSS Implementation Methods</title>
+<!-- Internal CSS -->
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 30px;
+}
+.page-title {
+    background-color: #003399;
+    color: white;
+    padding: 16px 24px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+.page-title h1 { font-size: 22px; }
+.page-title p  { font-size: 13px; opacity: 0.8; margin-top: 4px; }
+.section {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+}
+.section h2 {
+    font-size: 16px;
+    color: #003399;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 6px;
+    margin-bottom: 14px;
+}
+/* Internal CSS example */
+.internal-text {
+    color: purple;
+    font-size: 18px;
+    background-color: #f0e6ff;
+    padding: 10px 14px;
+    border-left: 4px solid purple;
+    border-radius: 4px;
+}
+.method-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    background-color: #003399;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+.back-btn {
+    display: inline-block;
+    background-color: #003399;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+.back-btn:hover { background-color: #0055cc; }
+</style>
+<!-- External CSS -->
+<link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<div class="page-title">
+    <h1>Exercise 1 – CSS Implementation Methods</h1>
+    <p>Demonstrating Inline, Internal, and External CSS</p>
+</div>
+
+<!-- Method 1: Inline CSS -->
+<div class="section">
+    <h2>Method 1 – Inline CSS</h2>
+    <span class="method-label">style attribute</span>
+    <h3 style="color: red; font-size: 22px; background-color: #fff0f0; padding: 10px 14px; border-left: 4px solid red; border-radius: 4px;">
+        This heading is styled using Inline CSS (style="color: red;")
+    </h3>
+    <p style="color: #555; font-size: 14px; margin-top: 8px;">
+        Inline CSS is written directly inside the HTML tag using the <code>style</code> attribute. It has the highest specificity but is hard to maintain.
+    </p>
+</div>
+
+<!-- Method 2: Internal CSS -->
+<div class="section">
+    <h2>Method 2 – Internal CSS</h2>
+    <span class="method-label">&lt;style&gt; tag in &lt;head&gt;</span>
+    <p class="internal-text">
+        This paragraph is styled using Internal CSS. The style is written inside a &lt;style&gt; tag in the &lt;head&gt; section.
+    </p>
+    <p style="color: #555; font-size: 14px; margin-top: 10px;">
+        Internal CSS applies to the whole page but only that one file. Good for single-page styling.
+    </p>
+</div>
+
+<!-- Method 3: External CSS -->
+<div class="section">
+    <h2>Method 3 – External CSS</h2>
+    <span class="method-label">&lt;link&gt; to style1.css</span>
+    <p class="external-text">
+        This paragraph is styled using External CSS. The style comes from the file <strong>style1.css</strong> which is linked in the &lt;head&gt; using a &lt;link&gt; tag.
+    </p>
+    <p style="color: #555; font-size: 14px; margin-top: 10px;">
+        External CSS is the best practice for real websites. One CSS file can style many HTML pages.
+    </p>
+</div>
+
+<a class="back-btn" href="index.html">&#8592; Back to Exercises</a>
+
+</body>
+</html>

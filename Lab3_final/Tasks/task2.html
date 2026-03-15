@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task 2 – Typography Showcase</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,400&family=Roboto+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/shared.css">
+<style>
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.font-box { background-color: #f9f9f9; border: 1px solid #e0e0e0; border-radius: 8px; padding: 16px; }
+.font-box p { margin: 4px 0; font-size: 15px; line-height: 1.6; }
+.label { font-size: 11px; font-weight: bold; background: #003399; color: white; padding: 2px 8px; border-radius: 3px; display: inline-block; margin-bottom: 8px; font-family: monospace; }
+.sample-big { font-size: 28px; font-weight: bold; color: #003399; margin-bottom: 6px; }
+/* Alignment samples */
+.al { border: 1px solid #e0e0e0; padding: 8px 12px; border-radius: 5px; margin-bottom: 6px; font-size: 14px; background: #fafafa; }
+/* Shadow samples */
+.sh1 { font-size: 22px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+.sh2 { font-size: 22px; font-weight: bold; color:#003399; text-shadow: 0 0 10px rgba(0,51,153,0.5); }
+.sh3 { font-size: 22px; font-weight: bold; text-shadow: 2px 2px 0 #ff8800, -2px -2px 0 #003399; }
+</style>
+</head>
+<body>
+
+<div class="page-title">
+    <h1>Task 2 – Typography Showcase</h1>
+    <p>3 Google Fonts · font sizes · text alignment · decoration · transform · shadow</p>
+</div>
+
+<!-- Google Fonts -->
+<div class="section">
+    <h2>3 Google Fonts</h2>
+    <div class="grid2">
+        <div class="font-box">
+            <span class="label">Poppins – Google Font 1</span>
+            <p class="sample-big" style="font-family:'Poppins',sans-serif;">The Quick Brown Fox</p>
+            <p style="font-family:'Poppins',sans-serif; font-size:14px; color:#555;">Used for headings and UI labels. Clean geometric sans-serif.</p>
+        </div>
+        <div class="font-box">
+            <span class="label">Playfair Display – Google Font 2</span>
+            <p class="sample-big" style="font-family:'Playfair Display',serif;">The Quick Brown Fox</p>
+            <p style="font-family:'Playfair Display',serif; font-size:14px; color:#555; font-style:italic;">Elegant serif for titles and editorial text.</p>
+        </div>
+        <div class="font-box">
+            <span class="label">Roboto Mono – Google Font 3</span>
+            <p class="sample-big" style="font-family:'Roboto Mono',monospace; font-size:20px;">selector { color: red; }</p>
+            <p style="font-family:'Roboto Mono',monospace; font-size:13px; color:#555;">Monospace font, perfect for code samples.</p>
+        </div>
+        <div class="font-box">
+            <span class="label">Web-safe fallback</span>
+            <p class="sample-big" style="font-family:Arial,sans-serif;">The Quick Brown Fox</p>
+            <p style="font-family:Arial,sans-serif; font-size:14px; color:#555;">Arial – available on every device, no import needed.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Font sizes -->
+<div class="section">
+    <h2>Font Sizes – Different Units</h2>
+    <p style="font-size:12px; margin:4px 0;">12px – Very small (captions)</p>
+    <p style="font-size:14px; margin:4px 0;">14px – Small body text</p>
+    <p style="font-size:16px; margin:4px 0;">16px – Normal body text</p>
+    <p style="font-size:20px; margin:4px 0;">20px – Medium heading</p>
+    <p style="font-size:1.5em; margin:4px 0;">1.5em – Relative to parent</p>
+    <p style="font-size:1.5rem; margin:4px 0;">1.5rem – Relative to root (16px)</p>
+    <p style="font-size:130%; margin:4px 0;">130% – Percentage of parent font size</p>
+</div>
+
+<!-- Alignment -->
+<div class="section">
+    <h2>Text Alignment</h2>
+    <p class="al" style="text-align:left;">text-align: left – default, starts from left edge</p>
+    <p class="al" style="text-align:center;">text-align: center – centred on the line</p>
+    <p class="al" style="text-align:right;">text-align: right – pushed to the right edge</p>
+    <p class="al" style="text-align:justify;">text-align: justify – stretched to fill the full line width. Both edges are flush, just like a newspaper column or book paragraph layout that you see in print.</p>
+</div>
+
+<!-- Decoration and Transform -->
+<div class="section">
+    <h2>Text Decoration &amp; Transform</h2>
+    <div class="grid2">
+        <div>
+            <span class="label">text-decoration</span>
+            <p style="text-decoration:underline; margin:6px 0;">Underline</p>
+            <p style="text-decoration:overline; margin:6px 0;">Overline</p>
+            <p style="text-decoration:line-through; margin:6px 0;">Line-through</p>
+            <p style="text-decoration:underline dotted red; margin:6px 0;">Dotted red underline</p>
+        </div>
+        <div>
+            <span class="label">text-transform</span>
+            <p style="text-transform:uppercase; margin:6px 0;">text-transform: uppercase</p>
+            <p style="text-transform:lowercase; margin:6px 0;">TEXT-TRANSFORM: LOWERCASE</p>
+            <p style="text-transform:capitalize; margin:6px 0;">text-transform: capitalize</p>
+        </div>
+    </div>
+</div>
+
+<!-- Text shadow -->
+<div class="section">
+    <h2>Text Shadow Effects</h2>
+    <p class="sh1" style="margin-bottom:10px;">Default Shadow – 2px 2px 4px</p>
+    <p class="sh2" style="margin-bottom:10px;">Glow Shadow – rgba blue glow</p>
+    <p class="sh3">Multi-colour Shadow – orange + blue offset</p>
+</div>
+
+<a class="back-btn" href="index.html">&#8592; Back to Tasks</a>
+</body>
+</html>

@@ -1,0 +1,117 @@
+/* style14.css – Box Model Properties */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; background-color: #f5f5f5; padding: 30px; }
+.page-title { background-color: #003399; color: white; padding: 16px 24px; border-radius: 8px; margin-bottom: 30px; }
+.page-title h1 { font-size: 22px; }
+.page-title p  { font-size: 13px; opacity: 0.8; margin-top: 4px; }
+.section { background-color: white; border: 1px solid #ddd; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+.section h2 { font-size: 16px; color: #003399; border-bottom: 2px solid #3498db; padding-bottom: 6px; margin-bottom: 10px; }
+.method-label { display: inline-block; font-size: 11px; font-weight: bold; background-color: #003399; color: white; padding: 2px 8px; border-radius: 3px; margin-bottom: 10px; font-family: monospace; }
+.desc  { font-size: 14px; color: #555; margin-bottom: 14px; }
+small  { font-size: 12px; font-weight: normal; }
+.back-btn { display: inline-block; background-color: #003399; color: white; padding: 10px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; transition: background-color 0.3s; }
+.back-btn:hover { background-color: #0055cc; }
+
+/* Box model visual diagram */
+.box-model-visual {
+    position: relative;
+    display: inline-block;
+}
+.margin-area {
+    background-color: #ffd0a0;
+    padding: 24px;
+    border-radius: 4px;
+    position: relative;
+}
+.border-area {
+    background-color: #003399;
+    padding: 14px;
+    border-radius: 3px;
+}
+.padding-area {
+    background-color: #a8d8a8;
+    padding: 18px;
+    border-radius: 2px;
+}
+.content-area {
+    background-color: #9ec8eb;
+    color: #003399;
+    padding: 16px 30px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 2px;
+}
+.layer-label {
+    display: block;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    letter-spacing: 0.5px;
+}
+.margin-label  { color: #cc6600; }
+.border-label  { color: #fff; }
+.padding-label { color: #1a6b1a; }
+
+/* Margins, padding, border */
+.box {
+    width: 280px;
+    padding: 20px;
+    margin: 20px 0;
+    border: 3px solid #3498db;
+    background-color: #fffde7;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Box-sizing */
+.content-box {
+    width: 280px;
+    padding: 20px;
+    border: 3px solid red;
+    box-sizing: content-box;
+    margin: 12px 0;
+    background-color: #ffebee;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.border-box {
+    width: 280px;
+    padding: 20px;
+    border: 3px solid green;
+    box-sizing: border-box;
+    margin: 12px 0;
+    background-color: #e8f5e9;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Outline */
+.outline-box {
+    width: 280px;
+    padding: 15px;
+    margin: 8px 0;
+    border: 2px solid black;
+    outline: 4px dashed red;
+    outline-offset: 4px;
+    background-color: #f5f5f5;
+    font-size: 14px;
+}
+
+/* Box shadows */
+.shadow-row { display: flex; gap: 20px; flex-wrap: wrap; }
+.shadow-box {
+    width: 160px;
+    padding: 18px;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.shadow-light  { box-shadow: 2px 2px 6px rgba(0,0,0,0.2); }
+.shadow-dark   { box-shadow: 5px 5px 15px rgba(0,0,0,0.5); }
+.shadow-blue   { box-shadow: 0 4px 18px rgba(0,51,153,0.5); }
+.shadow-inset  { box-shadow: inset 3px 3px 10px rgba(0,0,0,0.25); }

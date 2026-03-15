@@ -1,0 +1,37 @@
+/* style5.css – Pseudo-classes */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; background-color: #f5f5f5; padding: 30px; }
+.page-title { background-color: #003399; color: white; padding: 16px 24px; border-radius: 8px; margin-bottom: 30px; }
+.page-title h1 { font-size: 22px; }
+.page-title p  { font-size: 13px; opacity: 0.8; margin-top: 4px; }
+.section { background-color: white; border: 1px solid #ddd; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+.section h2 { font-size: 15px; color: #003399; border-bottom: 2px solid #3498db; padding-bottom: 6px; margin-bottom: 12px; font-family: monospace; }
+.method-label { display: inline-block; font-size: 11px; font-weight: bold; background-color: #003399; color: white; padding: 2px 8px; border-radius: 3px; margin-bottom: 10px; }
+.note { font-size: 13px; color: #777; margin-top: 10px; }
+.note-label { font-size: 13px; color: #777; }
+input[type="text"], input[type="checkbox"] { margin: 4px 0; }
+input[type="text"] { padding: 8px 12px; border: 2px solid #ccc; border-radius: 5px; font-size: 14px; width: 340px; display: block; }
+ul { padding-left: 22px; margin: 4px 0; }
+li { padding: 5px 0; font-size: 15px; }
+.back-btn { display: inline-block; background-color: #003399; color: white; padding: 10px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; transition: background-color 0.3s; }
+.back-btn:hover { background-color: #0055cc; }
+
+/* Link states */
+a:link    { color: blue; }
+a:visited { color: purple; }
+a:hover   { color: red; }
+a:active  { color: green; }
+
+/* Form states */
+input:focus    { background-color: lightyellow; outline: 2px solid #003399; }
+input:disabled { background-color: lightgray; cursor: not-allowed; }
+input:checked  { accent-color: green; }
+
+/* Structural pseudo-classes */
+li:first-child    { color: red; font-weight: bold; }
+li:last-child     { color: blue; font-weight: bold; }
+li:nth-child(2)   { background-color: lightgreen; padding-left: 6px; border-radius: 3px; }
+
+/* Content-based pseudo-classes */
+p:empty          { background-color: yellow; height: 24px; border: 1px dashed #aaa; border-radius: 3px; margin: 4px 0; }
+p:not(.special)  { color: brown; }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercise 6 – Pseudo-elements</title>
+<link rel="stylesheet" href="style6.css">
+</head>
+<body>
+
+<div class="page-title">
+    <h1>Exercise 6 – Pseudo-elements</h1>
+    <p>::before  ::after  ::first-letter  ::first-line  ::selection</p>
+</div>
+
+<div class="section">
+    <h2>::before and ::after</h2>
+    <span class="method-label">generated content</span>
+    <h2>Heading with Stars</h2>
+    <p class="note">The red * symbols were added by CSS using h2::before and h2::after – no HTML was changed.</p>
+</div>
+
+<div class="section">
+    <h2>::first-letter – Large Drop Cap</h2>
+    <span class="method-label">::first-letter</span>
+    <p class="drop-cap">
+        his paragraph demonstrates the first-letter pseudo-element. The very first letter is made large and blue, just like a drop cap in a book or magazine. The rest of the paragraph continues in normal size. Hover over the paragraph to see the first letter turn red.
+    </p>
+</div>
+
+<div class="section">
+    <h2>::first-line – Bold First Line</h2>
+    <span class="method-label">::first-line</span>
+    <p class="first-line-demo">
+        This is the first line of the paragraph. It will be displayed in bold because of the ::first-line pseudo-element. The second line and the rest of the paragraph will appear in normal weight without any bold styling applied to them.
+    </p>
+</div>
+
+<div class="section">
+    <h2>::selection – Custom Highlight Colour</h2>
+    <span class="method-label">::selection</span>
+    <p>Try selecting / highlighting any text on this page with your mouse. The selection background will turn <strong>yellow</strong> instead of the default blue because of the ::selection pseudo-element.</p>
+</div>
+
+<a class="back-btn" href="index.html">&#8592; Back to Exercises</a>
+
+</body>
+</html>

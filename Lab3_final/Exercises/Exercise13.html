@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercise 13 – Advanced Image Effects</title>
+<link rel="stylesheet" href="style13.css">
+</head>
+<body>
+
+<div class="page-title">
+    <h1>Exercise 13 – Advanced Image Effects</h1>
+    <p>Hover effects, CSS filters, blend modes, image masks and clip-path</p>
+</div>
+
+<div class="section">
+    <h2>Hover Effects on Images</h2>
+    <span class="method-label">transform: scale()  rotate()  transition</span>
+    <p class="desc">Hover over the images below to see the effects.</p>
+    <div class="img-row">
+        <div class="img-item">
+            <img src="image1.jpg" alt="Zoom hover" class="hover-zoom">
+            <p class="caption">Scale up on hover</p>
+        </div>
+        <div class="img-item">
+            <img src="image1.jpg" alt="Rotate hover" class="hover-rotate">
+            <p class="caption">Rotate on hover</p>
+        </div>
+        <div class="img-item">
+            <img src="image1.jpg" alt="Fade hover" class="hover-fade">
+            <p class="caption">Fade (opacity) on hover</p>
+        </div>
+        <div class="img-item">
+            <img src="image1.jpg" alt="Grayscale hover" class="hover-gray">
+            <p class="caption">Grayscale → colour on hover</p>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>CSS Filters – Blur, Brightness, Contrast</h2>
+    <span class="method-label">filter: blur()  brightness()  contrast()</span>
+    <div class="img-row">
+        <div class="img-item">
+            <img src="image2.jpg" alt="Normal" class="filter-normal">
+            <p class="caption">Normal (no filter)</p>
+        </div>
+        <div class="img-item">
+            <img src="image2.jpg" alt="Blur" class="filter-blur">
+            <p class="caption">blur(3px)</p>
+        </div>
+        <div class="img-item">
+            <img src="image2.jpg" alt="Bright" class="filter-brightness">
+            <p class="caption">brightness(140%)</p>
+        </div>
+        <div class="img-item">
+            <img src="image2.jpg" alt="Contrast" class="filter-contrast">
+            <p class="caption">contrast(200%)</p>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Blend Modes</h2>
+    <span class="method-label">mix-blend-mode: multiply  screen  overlay</span>
+    <p class="desc">Each image is placed on a coloured background. The blend mode controls how the two layers interact.</p>
+    <div class="img-row">
+        <div class="img-item">
+            <div class="blend-wrap blend-red">
+                <img src="image3.jpg" alt="Multiply" class="blend-img blend-multiply">
+            </div>
+            <p class="caption">multiply</p>
+        </div>
+        <div class="img-item">
+            <div class="blend-wrap blend-blue">
+                <img src="image3.jpg" alt="Screen" class="blend-img blend-screen">
+            </div>
+            <p class="caption">screen</p>
+        </div>
+        <div class="img-item">
+            <div class="blend-wrap blend-green">
+                <img src="image3.jpg" alt="Overlay" class="blend-img blend-overlay">
+            </div>
+            <p class="caption">overlay</p>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Image Masks &amp; Clipping Paths</h2>
+    <span class="method-label">clip-path: circle()  polygon()  ellipse()</span>
+    <div class="img-row">
+        <div class="img-item">
+            <img src="image4.jpg" alt="Circle clip" class="clip-circle">
+            <p class="caption">clip-path: circle(50%)</p>
+        </div>
+        <div class="img-item">
+            <img src="image4.jpg" alt="Triangle clip" class="clip-triangle">
+            <p class="caption">clip-path: polygon (triangle)</p>
+        </div>
+        <div class="img-item">
+            <img src="image4.jpg" alt="Ellipse clip" class="clip-ellipse">
+            <p class="caption">clip-path: ellipse()</p>
+        </div>
+        <div class="img-item">
+            <img src="image4.jpg" alt="Pentagon clip" class="clip-pentagon">
+            <p class="caption">clip-path: polygon (pentagon)</p>
+        </div>
+    </div>
+</div>
+
+<a class="back-btn" href="index.html">&#8592; Back to Exercises</a>
+
+</body>
+</html>

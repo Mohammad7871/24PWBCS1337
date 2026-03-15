@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercise 9 – Text Spacing and Layout</title>
+<link rel="stylesheet" href="style9.css">
+</head>
+<body>
+
+<div class="page-title">
+    <h1>Exercise 9 – Text Spacing and Layout</h1>
+    <p>Line height, letter spacing, word spacing, indent, white-space, text-overflow</p>
+</div>
+
+<div class="section">
+    <h2>Line Height</h2>
+    <span class="method-label">line-height</span>
+    <p class="line-tight">line-height: 1.2 – Tight spacing. This paragraph has reduced space between lines so all lines feel packed closely together making it hard to read long text.</p>
+    <br>
+    <p class="line-height">line-height: 1.8 – Comfortable spacing. This paragraph has more space between each line which makes it much easier to read especially for longer blocks of text on screen.</p>
+    <br>
+    <p class="line-loose">line-height: 2.5 – Very loose spacing. This paragraph has a lot of white space between lines. It feels very airy and spacious.</p>
+</div>
+
+<div class="section">
+    <h2>Letter Spacing and Word Spacing</h2>
+    <span class="method-label">letter-spacing  word-spacing</span>
+    <p class="spacing-normal">Normal spacing – Hello World</p>
+    <p class="spacing">letter-spacing: 3px – H e l l o   W o r l d</p>
+    <p class="word-spacing">word-spacing: 15px – Hello World from CSS</p>
+    <p class="spacing-wide">letter-spacing: 8px – LABEL STYLE</p>
+</div>
+
+<div class="section">
+    <h2>Text Indent</h2>
+    <span class="method-label">text-indent</span>
+    <p class="indent">This paragraph has a text-indent of 40px applied to it. The first line starts with a 40px gap just like a paragraph indent you would see in a printed book or formal document. The rest of the lines continue normally with no indentation.</p>
+</div>
+
+<div class="section">
+    <h2>White Space and Text Overflow</h2>
+    <span class="method-label">white-space  text-overflow</span>
+    <p>Normal wrapping – the text below wraps to the next line:</p>
+    <p class="normal-wrap">This is a long sentence and it will wrap normally onto the next line when it reaches the edge of the container because white-space is set to normal.</p>
+    <br>
+    <p>white-space: nowrap + text-overflow: ellipsis:</p>
+    <div class="overflow">This is a very long text that will not fit inside the box and demonstrates how text overflow with ellipsis works in CSS.</div>
+</div>
+
+<a class="back-btn" href="index.html">&#8592; Back to Exercises</a>
+
+</body>
+</html>

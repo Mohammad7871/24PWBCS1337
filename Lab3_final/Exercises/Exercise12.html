@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercise 12 – Basic Image Styling</title>
+<link rel="stylesheet" href="style12.css">
+</head>
+<body>
+
+<div class="page-title">
+    <h1>Exercise 12 – Basic Image Styling</h1>
+    <p>Dimensions, border-radius, object-fit, object-position, basic filters</p>
+</div>
+
+<div class="section">
+    <h2>Control Dimensions &amp; Aspect Ratio</h2>
+    <span class="method-label">width  height  object-fit: cover</span>
+    <p class="desc">The image below is forced into a 300×200px box. <code>object-fit: cover</code> makes it fill the box without stretching.</p>
+    <img src="image1.jpg" alt="Image 1" class="dimension">
+    <p class="note">Without object-fit the image would stretch and look distorted.</p>
+</div>
+
+<div class="section">
+    <h2>Borders &amp; Border Radius</h2>
+    <span class="method-label">border  border-radius</span>
+    <div class="img-row">
+        <div class="img-item">
+            <img src="image2.jpg" alt="Image 2" class="border-radius">
+            <p class="caption">border-radius: 20px<br>Rounded corners</p>
+        </div>
+        <div class="img-item">
+            <img src="image2.jpg" alt="Image 2 circle" class="img-circle">
+            <p class="caption">border-radius: 50%<br>Circle shape</p>
+        </div>
+        <div class="img-item">
+            <img src="image2.jpg" alt="Image 2 border" class="img-thick-border">
+            <p class="caption">border: 6px solid<br>Thick coloured border</p>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Object-fit &amp; Object-position</h2>
+    <span class="method-label">object-fit: contain  object-position: top right</span>
+    <p class="desc">Both images are in a 300×200px box. The left uses <code>contain</code> (whole image fits inside), the right uses <code>cover</code> (fills box, crops edges).</p>
+    <div class="img-row">
+        <div class="img-item">
+            <img src="image3.jpg" alt="Image 3 contain" class="object-contain">
+            <p class="caption">object-fit: contain</p>
+        </div>
+        <div class="img-item">
+            <img src="image3.jpg" alt="Image 3 cover" class="object-cover">
+            <p class="caption">object-fit: cover</p>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Basic CSS Filters</h2>
+    <span class="method-label">filter: grayscale()  brightness()  contrast()  sepia()</span>
+    <div class="img-row">
+        <div class="img-item">
+            <img src="image4.jpg" alt="Original" class="filter-none">
+            <p class="caption">Original</p>
+        </div>
+        <div class="img-item">
+            <img src="image4.jpg" alt="Grayscale" class="filter-gray">
+            <p class="caption">grayscale(100%)</p>
+        </div>
+        <div class="img-item">
+            <img src="image4.jpg" alt="Bright" class="filter-bright">
+            <p class="caption">brightness(150%)</p>
+        </div>
+        <div class="img-item">
+            <img src="image4.jpg" alt="Sepia" class="filter-sepia">
+            <p class="caption">sepia(80%)</p>
+        </div>
+    </div>
+</div>
+
+<a class="back-btn" href="index.html">&#8592; Back to Exercises</a>
+
+</body>
+</html>
