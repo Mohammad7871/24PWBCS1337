@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 7: Holy Grail Layout - Simple Comparison</title>
+    <link rel="stylesheet" href="../Css_all/exe_task4.css">
+</head>
+<body>
+
+    <h1>Holy Grail Layout (Header - Nav - Content - Aside - Footer)</h1>
+
+    <!-- Method 1: Float -->
+    <section class="method">
+        <h2>1. Float Method</h2>
+        <div class="holy float">
+            <header>Header</header>
+            
+            <div class="content-wrapper">
+                <nav>Left Nav</nav>
+                <main>Main Content Area (biggest part)</main>
+                <aside>Right Sidebar</aside>
+            </div>
+            
+            <footer>Footer</footer>
+        </div>
+        <p><strong>Pros:</strong> Old browsers mein kaam karta hai<br>
+           <strong>Cons:</strong> Clearfix chahiye, height barabar nahi hoti asani se</p>
+    </section>
+
+    <!-- Method 2: Flexbox -->
+    <section class="method">
+        <h2>2. Flexbox Method</h2>
+        <div class="holy flex">
+            <header>Header</header>
+            
+            <div class="content-wrapper">
+                <nav>Left Nav</nav>
+                <main>Main Content Area (biggest part)</main>
+                <aside>Right Sidebar</aside>
+            </div>
+            
+            <footer>Footer</footer>
+        </div>
+        <p><strong>Pros:</strong> Height apne aap barabar, bohot flexible<br>
+           <strong>Cons:</strong> Sirf 1 direction (row ya column) best hai</p>
+    </section>
+
+    <!-- Method 3: Grid -->
+    <section class="method">
+        <h2>3. Grid Method (Sabse Easy)</h2>
+        <div class="holy grid">
+            <header>Header</header>
+            <nav>Left Nav</nav>
+            <main>Main Content Area (biggest part)</main>
+            <aside>Right Sidebar</aside>
+            <footer>Footer</footer>
+        </div>
+    </section>
+
+    <p style="text-align: center; margin: 40px 0;">
+        <a href="../index.html" class="back">← Back to Home</a>
+    </p>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #f8f9fa;
+  line-height: 1.6;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+h2 {
+  color: #0066cc;
+  margin-top: 40px;
+}
+
+.block {
+  background: #e74c3c; /* red */
+  color: white;
+  padding: 15px;
+  margin: 10px 0;
+}
+
+.inline {
+  background: #3498db; /* blue */
+  color: white;
+  padding: 6px 12px;
+  margin: 4px;
+}
+
+.inline-block {
+  display: inline-block;
+  background: #2ecc71; /* green */
+  color: white;
+  padding: 20px;
+  margin: 10px;
+  width: 120px;
+  text-align: center;
+}
+
+.box {
+  background: #f39c12; /* orange */
+  color: white;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.none {
+  display: none;
+}
+
+/* Simple table look */
+.table {
+  display: table;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.row {
+  display: table-row;
+}
+
+.cell {
+  display: table-cell;
+  padding: 12px;
+  border: 1px solid #ccc;
+}
+
+.header .cell {
+  background: #2c3e50;
+  color: white;
+  font-weight: bold;
+}
+
+/* Back button */
+.back-btn {
+  display: inline-block;
+  background: #0066cc;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.back-btn:hover {
+  background: #004080;
+}

@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f8f9fa;
+    color: #333;
+}
+
+/* Top Navigation - Flexbox horizontal */
+.top-nav {
+    background: #2c3e50;
+    color: white;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.nav-menu a:hover {
+    background: #34495e;
+    border-radius: 4px;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.layout {
+    display: flex;
+    min-height: calc(100vh - 70px);
+}
+
+.side-nav {
+    width: 220px;
+    background: #34495e;
+    color: white;
+}
+
+.side-nav ul {
+    list-style: none;
+    padding: 1rem 0;
+    margin: 0;
+}
+
+.side-nav a {
+    display: block;
+    padding: 1rem 2rem;
+    color: white;
+    text-decoration: none;
+}
+
+.side-nav a:hover {
+    background: #2c3e50;
+}
+
+.main-content {
+    flex: 1;             
+    padding: 2rem;
+}
+
+.main-content h1 {
+    margin-top: 0;
+}
+
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: #2c3e50;
+        padding: 1rem;
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .side-nav {
+        display: none;
+        width: 100%;
+    }
+
+    .side-nav.show {
+        display: block;
+    }
+
+    .layout {
+        flex-direction: column;
+    }
+
+    .main-content {
+        padding: 1rem;
+    }
+}
+
+/* Back button */
+.back-area {
+    text-align: center;
+    padding: 1.5rem;
+    background: #eee;
+}
+
+.back-btn {
+    background: #2c3e50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.back-btn:hover {
+    background: #1a252f;
+}

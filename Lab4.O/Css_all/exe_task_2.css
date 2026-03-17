@@ -1,0 +1,144 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #f8f8f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+.magazine {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 2px solid #ccc;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3em;
+  color: #c0392b;
+}
+
+.date {
+  color: #777;
+  font-size: 1.1em;
+}
+
+/* Main content area */
+.content {
+  overflow: hidden; /* Clearfix - important for floats */
+}
+
+/* Main article - 70% width, float left */
+.main-article {
+  width: 70%;
+  float: left;
+  padding-right: 20px;
+}
+
+.main-article h2 {
+  font-size: 2.2em;
+  margin: 0 0 10px 0;
+  color: #2c3e50;
+}
+
+.byline {
+  color: #777;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+/* Sidebar - 30% width, float left (or right) */
+.sidebar {
+  width: 30%;
+  float: left;
+  background: #f0f0f0;
+  padding: 15px;
+}
+
+.sidebar h3 {
+  color: #c0392b;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 8px 0;
+  border-bottom: 1px dashed #ddd;
+}
+
+/* Ad box */
+.ad {
+  background: #ffe000;
+  padding: 15px;
+  text-align: center;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+/* Floating images inside article */
+.float-left {
+  float: left;
+  margin: 0 20px 10px 0;
+  max-width: 40%;
+}
+
+.float-right {
+  float: right;
+  margin: 0 0 10px 20px;
+  max-width: 35%;
+}
+
+/* Footer */
+footer {
+  clear: both; /* Important - clears floats */
+  text-align: center;
+  padding: 20px 0;
+  background: #2c3e50;
+  color: white;
+  margin-top: 30px;
+}
+
+/* Back button */
+.back {
+  display: inline-block;
+  background: #c0392b;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.back:hover {
+  background: #a93226;
+}
+
+/* Basic responsive - stack on small screens */
+@media (max-width: 768px) {
+  .main-article,
+  .sidebar {
+    width: 100%;
+    float: none;
+  }
+
+  .float-left,
+  .float-right {
+    float: none;
+    display: block;
+    margin: 15px auto;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 4: Simple Flexbox Navigation</title>
+    <link rel="stylesheet" href="../Css_all/exe_task3.css" />
+  </head>
+  <body>
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+      <div class="nav-container">
+        <a href="#" class="logo">FlexNav</a>
+
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+      </div>
+    </nav>
+
+    <!-- Layout: Side nav + Main content -->
+    <div class="layout">
+      <!-- Side Navigation (vertical flex) -->
+      <nav class="side-nav" id="sideNav">
+        <ul>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Settings</a></li>
+        </ul>
+      </nav>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <h1>Flexbox Navigation Demo</h1>
+        <p>This page uses Flexbox to create:</p>
+        <ul>
+          <li>Horizontal top menu</li>
+          <li>Vertical side menu</li>
+          <li>Flexible main area</li>
+          <li>Simple mobile responsive view</li>
+        </ul>
+
+        <h2>Resize window to see changes</h2>
+        <p>On small screens: side nav hides, top menu becomes hamburger.</p>
+      </main>
+    </div>
+
+    <!-- Back link -->
+    <div class="back-area">
+      <a href="../index.html" class="back-btn">← Back to Home</a>
+    </div>
+
+    
+  </body>
+</html>

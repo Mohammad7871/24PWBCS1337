@@ -1,0 +1,168 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: #f9f9f9;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #0066cc;
+    margin: 30px 0 15px;
+}
+
+.method {
+    margin-bottom: 50px;
+    background: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+.holy {
+    min-height: 400px;
+    background: #eee;
+}
+
+header, footer {
+    background: #444;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.3em;
+}
+
+nav, aside {
+    background: #e74c3c;          
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    background: white;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.float .content-wrapper {
+    overflow: hidden;          
+}
+
+.float nav {
+    float: left;
+    width: 20%;
+}
+
+.float main {
+    float: left;
+    width: 60%;
+}
+
+.float aside {
+    float: left;
+    width: 20%;
+}
+
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex .content-wrapper {
+    display: flex;
+    flex: 1;
+}
+
+.flex nav {
+    flex: 1;
+}
+
+.flex main {
+    flex: 3;
+}
+
+.flex aside {
+    flex: 1;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;   
+    grid-template-rows: auto 1fr auto;    
+    min-height: 400px;
+}
+
+.grid header {
+    grid-column: 1 / 4;     
+}
+
+.grid nav {
+    grid-column: 1;
+}
+
+.grid main {
+    grid-column: 2;
+}
+
+.grid aside {
+    grid-column: 3;
+}
+
+.grid footer {
+    grid-column: 1 / 4;     
+}
+
+@media (max-width: 768px) {
+    .float nav,
+    .float main,
+    .float aside {
+        float: none;
+        width: 100%;
+    }
+
+    .flex .content-wrapper {
+        flex-direction: column;
+    }
+
+    .flex nav,
+    .flex main,
+    .flex aside {
+        flex: none;
+        width: 100%;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
+    }
+
+    .grid header,
+    .grid nav,
+    .grid main,
+    .grid aside,
+    .grid footer {
+        grid-column: 1;
+    }
+}
+
+/* Back button */
+.back {
+    display: inline-block;
+    background: #0066cc;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.back:hover {
+    background: #004080;
+}

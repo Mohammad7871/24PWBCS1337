@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 2: Simple Float Magazine Layout</title>
+    <link rel="stylesheet" href="../Css_all/exe_task_2.css" />
+  </head>
+  <body>
+    <div class="magazine">
+      <!-- Header -->
+      <header>
+        <h1>Magazine Task</h1>
+        <h1>THE DAILY NEWS</h1>
+        <p class="date">Friday, March 2024</p>
+      </header>
+
+      <!-- Main content with floats -->
+      <div class="content clearfix">
+        <!-- Main Article (float left) -->
+        <main class="main-article">
+          <h2>Future of Web Design with CSS</h2>
+          <p class="byline">By Ali Khan</p>
+
+          <img
+            src="https://via.placeholder.com/280x180"
+            alt="Web Image"
+            class="float-left"
+          />
+
+          <p>
+            CSS layouts have changed a lot. We started with tables, then floats,
+            now we have Flexbox and Grid. But floats are still useful for
+            magazine-style pages like this one.
+          </p>
+
+          <p>
+            Floats were first made to wrap text around images. Developers used
+            them to make columns on webpages. This example shows a main article
+            and a sidebar using float.
+          </p>
+
+          <img
+            src="https://via.placeholder.com/220x280"
+            alt="Design Image"
+            class="float-right"
+          />
+
+          <p>
+            Today we use media queries to make pages mobile-friendly. On small
+            screens, columns stack on top of each other. This makes the site
+            easy to read on phones.
+          </p>
+
+          <h3>Why Learn Floats?</h3>
+          <p>
+            Floats teach important concepts like clearing floats and
+            understanding document flow. Even in modern CSS, knowing floats
+            helps you understand older websites and some special cases.
+          </p>
+        </main>
+
+        <!-- Sidebar (float right) -->
+        <aside class="sidebar">
+          <h3>Popular Stories</h3>
+          <ul>
+            <li>Learn Flexbox Fast</li>
+            <li>CSS Grid Basics</li>
+            <li>Responsive Design Tips</li>
+            <li>Modern Web Trends</li>
+          </ul>
+
+          <div class="ad">
+            <strong>AD</strong><br />
+            Learn CSS Today!
+          </div>
+
+          <h3>Quick Links</h3>
+          <ul>
+            <li>About Us</li>
+            <li>Contact</li>
+            <li>Subscribe</li>
+          </ul>
+        </aside>
+      </div>
+
+      <!-- Simple Footer -->
+      <footer>
+        <p>&copy; 2024 Daily News - Float Layout Example</p>
+      </footer>
+    </div>
+
+    <p style="text-align: center; margin: 30px">
+      <a href="../index.html" class="back">← Back to Home</a>
+    </p>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 18: Simple Preference Media Queries</title>
+    <link rel="stylesheet" href="../Css_all/exe_tast5.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Preference Media Queries – Simple Demo</h1>
+
+      <!-- 1. Dark Mode -->
+      <section>
+        <h2>1. Dark Mode (prefers-color-scheme: dark)</h2>
+        <p>
+          Ye page apne aap dark mode mein badal jata hai agar aapka
+          system/computer dark mode pe set ho.
+        </p>
+
+        <div class="demo-box">
+          <h3>Example Area</h3>
+          <p>
+            Change your phone/computer to dark mode and refresh the page →
+            colors will change automatically.
+          </p>
+        </div>
+      </section>
+
+      <!-- 2. Reduced Motion -->
+      <section>
+        <h2>2. Reduced Motion (prefers-reduced-motion: reduce)</h2>
+        <p>
+          Agar aapke system mein "reduce motion" on hai, to neeche wali
+          animation nahi chalegi ya bohot slow ho jayegi.
+        </p>
+
+        <div class="motion-box"></div>
+
+        <p>
+          <strong>Important for:</strong> People who feel uncomfortable or dizzy
+          because of moving elements.
+        </p>
+      </section>
+
+      <!-- 3. Print Styles -->
+      <section>
+        <h2>3. Print Styles (@media print)</h2>
+        <p>Press Ctrl + P (or Cmd + P on Mac) to see print preview.</p>
+        <p>You should see:</p>
+        <ul>
+          <li>White background + black text</li>
+          <li>No blue buttons or colors</li>
+          <li>Larger text for reading</li>
+        </ul>
+
+        <button onclick="window.print()">Print Preview</button>
+      </section>
+
+      <!-- Back link -->
+      <p style="text-align: center; margin-top: 60px">
+        <a href="../index.html" class="back-link">← Back to Home</a>
+      </p>
+    </div>
+  </body>
+</html>
